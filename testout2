@@ -1,0 +1,2 @@
+echo heythaerrr | tr a s | tr e o | tr a-z A-Z
+echo myFreinfssd | tr s t | tr i x | tr m b

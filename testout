@@ -1,0 +1,2 @@
+cat < backup.c | tr fuscehb cillas | tr a-z A-Z > your.outputf
+cat < testout2 | tr fusc cil | tr e a | tr hb s>your.outpute

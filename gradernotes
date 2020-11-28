@@ -1,0 +1,25 @@
+cssc0096
+Wesley varrasso
+John Carroll
+cs570 
+nov 19  2020
+
+
+I believe everything works perfectly under all conditions 
+
+I wrote this code myself with inspiration from 
+operating systems notes from professor John
+Carroll
+
+design descisions 
+for ambiguous cases like echo hi >& i perform the fileio redrection like tcsh does on echo hi
+but since & is not a valid file it fails with a no such file or directory
+for ambiguous case of sort < foo << EOF I keep track of how many times input is being redirected
+and report error if < and << are in a command i send a dont fork flag and report an error 
+"ambiguous input" like tcsh
+for cases like echo hi >| i report a "null command" error and dont fork 
+also for << f1 i report a "null command" error and dont fork
+also for echo hey << i report a "null command" error and dont fork
+for bad variables like echo $badvar i dont fork and report "Undefined variable badvar" 
+for tilde failure like ~blah i report "undefined user: blah"
+
